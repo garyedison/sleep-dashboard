@@ -115,6 +115,7 @@ header { padding:20px 32px; display:flex; align-items:center; justify-content:sp
     <button class="tab" data-tab="tracking">&#128202; Sleep Trackers</button>
     <button class="tab" data-tab="sensory">&#129513; Sensory &amp; Autism</button>
     <button class="tab" data-tab="custom">&#128269; Custom Search</button>
+    <button class="tab" data-tab="sensors">&#128225; Non-Touch Sensors</button>
     <button class="tab" data-tab="saved">&#128190; Saved Products</button>
   </div>
   <div class="search-area">
@@ -130,6 +131,9 @@ header { padding:20px 32px; display:flex; align-items:center; justify-content:sp
     <button class="filter-chip" data-q="melatonin kids sleep">Kids Melatonin</button>
     <button class="filter-chip" data-q="sleep headband bluetooth">Sleep Headbands</button>
     <button class="filter-chip" data-q="sensory toys autism calming">Sensory Calming Toys</button>
+    <button class="filter-chip" data-q="non contact sleep monitor">Non-Contact Sleep Monitor</button>
+<button class="filter-chip" data-q="radar sleep tracker sensor">Radar Sleep Sensor</button>
+<button class="filter-chip" data-q="under mattress sleep tracker">Under Mattress Tracker</button>
   </div>
   <div class="stats-row">
     <div class="stat-card"><div class="stat-label">Products Found</div><div class="stat-value" id="statCount">&mdash;</div><div class="stat-sub">from current search</div></div>
@@ -266,7 +270,7 @@ async function doSearch(query) {
   catch(err) { document.getElementById('productsContainer').innerHTML='<div class="error-box">Error: '+esc(err.message)+'</div>'; }
 }
 
-var TAB_QUERIES = { bestsellers:'best selling sleep products 2025', tracking:'sleep tracker device watch', sensory:'sensory products kids autism sleep weighted', custom:null, saved:null };
+var TAB_QUERIES = { bestsellers:'best selling sleep products 2025', tracking:'sleep tracker device watch', sensory:'sensory products kids autism sleep weighted', sensors:'non contact sleep monitor radar sensor under mattress', custom:null, saved:null };
 
 document.querySelectorAll('.tab').forEach(function(tab) {
   tab.addEventListener('click',function(){
